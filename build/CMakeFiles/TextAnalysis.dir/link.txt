@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/TextAnalysis.dir/src/wejulu/TextAnalysisAppBST.cpp.o CMakeFiles/TextAnalysis.dir/src/wejulu/TextAnalysisImplBST.cpp.o  -o ../bin/TextAnalysis 

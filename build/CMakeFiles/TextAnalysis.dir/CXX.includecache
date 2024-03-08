@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/emox/CMU/DSA4E/ASSINGMENT03/src/wejulu/TextAnalysisAppBST.cpp
+TextAnalysisBST.h
+/home/emox/CMU/DSA4E/ASSINGMENT03/src/wejulu/TextAnalysisBST.h
+fstream
+-
+iostream
+-
+cctype
+-
+cstring
+-
+
+/home/emox/CMU/DSA4E/ASSINGMENT03/src/wejulu/TextAnalysisBST.h
+string
+-
+
