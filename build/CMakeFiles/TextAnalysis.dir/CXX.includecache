@@ -22,3 +22,15 @@ cstring
 string
 -
 
+/home/emox/CMU/DSA4E/ASSINGMENT03/src/wejulu/TextAnalysisImplBST.cpp
+TextAnalysisBST.h
+/home/emox/CMU/DSA4E/ASSINGMENT03/src/wejulu/TextAnalysisBST.h
+fstream
+-
+iostream
+-
+cctype
+-
+iomanip
+-
+

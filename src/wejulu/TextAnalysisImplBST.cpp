@@ -9,39 +9,44 @@
 // Transform the input string to lowercase
 std::string toLowerCase(const std::string& str) {
     std::string lowerStr;
+     // Iterate through each character and convert it to lowercase
     for (char c : str) {
         lowerStr += std::tolower(static_cast<unsigned char>(c));
     }
     return lowerStr;
 }
 
-// Constructor
+// Initialize the BST with a null root
 WordBST::WordBST() : root(nullptr) {}
 
-// Destructor
+// Ensure all nodes are deleted when the BST is destroyed
 WordBST::~WordBST() {
-    destroyTree(root);
+    destroyTree(root);// Recursively delete all nodes to avoid memory leaks
 }
 
 // Private method to destroy the tree
 void WordBST::destroyTree(Node* node) {
     if (node != nullptr) {
-        destroyTree(node->left);
-        destroyTree(node->right);
-        delete node;
+        destroyTree(node->left);// Delete left subtree
+        destroyTree(node->right); // Delete right subtree
+        delete node;// Delete the current node
     }
 }
 
 // Private method to insert a word into the BST
 void WordBST::insertPrivate(Node*& node, const std::string& word, int currentLevel) {
     if (node == nullptr) {
+        // If spot is found, insert new node
         node = new Node(word);
         node->level = currentLevel;
     } else if (toLowerCase(word) < toLowerCase(node->word)) {
+        // Word should go to the left
         insertPrivate(node->left, word, currentLevel + 1);
     } else if (toLowerCase(word) > toLowerCase(node->word)) {
+        // Word should go to the right
         insertPrivate(node->right, word, currentLevel + 1);
     } else {
+        // Word already exists, increase its frequency
         node->frequency++;
     }
 }
@@ -55,6 +60,7 @@ void WordBST::insert(const std::string& word) {
 void WordBST::writeInOrder(Node* node, std::ofstream& outFile) {
     if (node != nullptr) {
         writeInOrder(node->left, outFile);
+        // Write the current node's word, frequency, and level
         outFile << node->word << " " << node->frequency << " (" << node->level << ")\n";
         writeInOrder(node->right, outFile);
     }
@@ -65,9 +71,11 @@ void WordBST::computeProbesPrivate(Node* node, int& totalProbes, int& maxProbes,
     if (node != nullptr) {
         wordCount++;
         totalProbes += currentProbe;
+        // Update maxProbes if currentProbe is larger
         if (currentProbe > maxProbes) {
             maxProbes = currentProbe;
         }
+        // Continue to left and right children
         computeProbesPrivate(node->left, totalProbes, maxProbes, wordCount, currentProbe + 1);
         computeProbesPrivate(node->right, totalProbes, maxProbes, wordCount, currentProbe + 1);
     }
@@ -84,7 +92,7 @@ void WordBST::computeProbes(int& maxProbes, float& averageProbes) {
 
 // Write the contents of the BST to a file
 void WordBST::writeToFile(const std::string& fileName) {
-    std::ofstream outFile(fileName, std::ios::app);
+    std::ofstream outFile(fileName, std::ios::app); // Append mode
     if (!outFile.is_open()) {
         std::cerr << "Failed to open the output file." << std::endl;
         return;
@@ -92,6 +100,7 @@ void WordBST::writeToFile(const std::string& fileName) {
 
     int maxProbes;
     float averageProbes;
+    // Calculate probe statistics
     computeProbes(maxProbes, averageProbes);
 
     outFile << "Maximum number of probes: " << maxProbes << std::endl;
