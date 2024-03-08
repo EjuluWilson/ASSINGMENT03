@@ -9,9 +9,90 @@ you 1 (0)
 --------------------
 ../data/textfile2.txt
 Maximum number of probes: 3
-Average number of probes: 2
+Average number of probes: 2.0
 dsa 2 (1)
 love 3 (0)
 must 3 (2)
 you 1 (1)
+--------------------
+../data/textfile3.txt
+Maximum number of probes: 6
+Average number of probes: 3.4
+africa 2 (3)
+and 2 (2)
+best-practice 2 (3)
+carnegie 2 (1)
+ejulu 2 (0)
+in 4 (3)
+involved 2 (4)
+machine-learning 2 (5)
+project 2 (2)
+s 2 (1)
+techniques 2 (3)
+university 2 (2)
+--------------------
+../data/textfile4.txt
+Maximum number of probes: 6
+Average number of probes: 3.5
+2023 1 (1)
+5g 1 (4)
+ai 1 (3)
+cmu-256 1 (2)
+in 2 (0)
+launched 1 (3)
+merging 1 (5)
+pittsburgh 1 (4)
+project 1 (2)
+technology 1 (3)
+the 1 (1)
+with 1 (2)
+--------------------
+../data/textfile5.txt
+Maximum number of probes: 7
+Average number of probes: 4.1
+acclaim 1 (4)
+ai-driven 1 (3)
+analytics 1 (4)
+east-africa--received 1 (6)
+in 1 (5)
+innovative 1 (2)
+project--on 1 (3)
+s 1 (1)
+wilson 1 (0)
+--------------------
+../data/textfile6.txt
+Maximum number of probes: 4
+Average number of probes: 2.8
+africa 3 (3)
+east 2 (2)
+practice 3 (3)
+rwanda 2 (1)
+uganda 2 (0)
+--------------------
+../data/textfile7.txt
+Maximum number of probes: 5
+Average number of probes: 3.2
+learning 3 (3)
+machine 3 (2)
+machines 1 (4)
+s 2 (3)
+up-date 3 (1)
+update 2 (0)
+--------------------
+../data/textfile8.txt
+Maximum number of probes: 0
+Average number of probes: 0.0
+--------------------
+../data/textfile9.txt
+Maximum number of probes: 1
+Average number of probes: 1.0
+thisisaverylongstringwithoutanyspacesortokensandshouldbetreatedasasingleword 1 (0)
+--------------------
+../data/textfile10.txt
+Maximum number of probes: 3
+Average number of probes: 2.0
+2024 1 (1)
+ai- 1 (0)
+machine-learning 1 (2)
+rwanda 1 (1)
 --------------------

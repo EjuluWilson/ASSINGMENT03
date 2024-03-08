@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include <cctype>
+#include <iomanip>
 
 // Transform the input string to lowercase
 std::string toLowerCase(const std::string& str) {
@@ -94,6 +95,7 @@ void WordBST::writeToFile(const std::string& fileName) {
     computeProbes(maxProbes, averageProbes);
 
     outFile << "Maximum number of probes: " << maxProbes << std::endl;
+    outFile << std::fixed << std::setprecision(1); // Included using <iomanip>
     outFile << "Average number of probes: " << averageProbes << std::endl;
 
     writeInOrder(root, outFile);
